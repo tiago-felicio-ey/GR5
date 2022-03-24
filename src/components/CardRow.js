@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Row, Col } from "react-bootstrap";
+
 export default (CardRow) => {
   return (
     <Row xs={1} sm={2} md={4} lg={6} className="g-6">

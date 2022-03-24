@@ -1,7 +1,8 @@
 .App {
   text-align: center;
   background-color: #21242d;
-  height: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {

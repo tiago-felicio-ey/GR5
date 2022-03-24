@@ -1,23 +1,25 @@
 import React from "react";
-import { Form, Button } from "react-bootstrap";
+import { InputGroup, FormControl, Button } from "react-bootstrap";
 
-class SearchBar extends React.Component {
-  render() {
-    return (
-      <div>
-        <section id="searchCard">
-          <div id="squareSearch">
-            <Form>
-              <Form.Group>
-                <Form.Control></Form.Control>
-              </Form.Group>
-            </Form>
-          </div>
-          <Button id="margin">Search</Button>
-        </section>
+const SearchBar = () => {
+
+  
+  return (
+    <div id="searchCard">
+      <div id="squareSearch">
+        <InputGroup className="mb-3">
+          <FormControl
+            placeholder="Heroi ..."
+            aria-label="Heroi"
+            aria-describedby="basic-addon2"
+          />
+          <Button variant="outline-secondary" id="button-addon2">
+            Pesquisar
+          </Button>
+        </InputGroup>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default SearchBar;
