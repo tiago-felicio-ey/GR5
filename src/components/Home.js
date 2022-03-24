@@ -1,20 +1,19 @@
 import React from "react";
-import './Home.css';
-import { Form, Button } from "react-bootstrap";
+import "./Home.css";
+import CardRow from "./CardRow";
+import SearchBar from "./searchBar";
 
 class Home extends React.Component {
-render(){
-  return (
-    <div id="squareSearch">
-      <Form>
-        <Form.Group>
-          <Form.Control></Form.Control>
-        </Form.Group>
-      </Form>
-      <Button>Search</Button>
-    </div>
-  );
-}
+  render() {
+    return (
+      <div>
+        <SearchBar/>
+        <div id="cardRowAlign">
+          <CardRow />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Home;

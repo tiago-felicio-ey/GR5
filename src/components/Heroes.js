@@ -1,5 +1,6 @@
 import React from "react";
-import { Table } from "react-bootstrap";
+import { Table, Button } from "react-bootstrap";
+import SearchBar from "./searchBar";
 
 class Heroes extends React.Component {
   constructor(props) {
@@ -26,32 +27,39 @@ class Heroes extends React.Component {
 
   render() {
     return (
-      <Table>
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th>Poder</th>
-            <th>Universo</th>
-            <th>Data de cadastro</th>
-          </tr>
-        </thead>
-        <tbody>
-          {this.state.hero.map((hero) => (
+      <div>
+        <SearchBar/>
+        <Table striped bordered hover variant="dark">
+          <thead>
             <tr>
-              <td>{hero.nome}</td>
-              <td>{hero.poder}</td>
-              <td>{hero.universo}</td>
-              <td>{hero.dataCad}</td>{" "}
-              <button type="button" class="btn btn-light">
-                Alterar
-              </button>
-              <button type="button" class="btn btn-light">
-                Deletar
-              </button>
+              <th id="whiteTxt">Nome</th>
+              <th>Poder</th>
+              <th>Universo</th>
+              <th>Data de cadastro</th>
             </tr>
-          ))}
-        </tbody>
-      </Table>
+          </thead>
+          <tbody>
+            {this.state.hero.map((hero) => (
+              <tr>
+                <td>{hero.nome}</td>
+                <td>{hero.poder}</td>
+                <td>{hero.universo}</td>
+                <td>{hero.dataCad}</td>{" "}
+                <td id="margin">
+                  <Button variant="outline-light" size="sm">
+                    Alterar
+                  </Button>
+                </td>
+                <td id="margin">
+                  <Button variant="outline-light" size="sm">
+                    Deletar
+                  </Button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
+      </div>
     );
   }
 }

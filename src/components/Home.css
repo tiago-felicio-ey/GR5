@@ -1,6 +1,25 @@
 #squareSearch {
-  height: 50px;
-  width: 800px;
   text-align: center;
-  position: relative;
+  padding-left: 20%;
+  padding-right: 20%;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+
+#textColor{
+  color: #3f3f3f;
+}
+
+#margin{
+  margin-bottom: 20px;
+}
+
+#searchCard{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#cardRowAlign{
+  margin-left: 2%;
+  margin-right: 2%;
+  padding-bottom: 2%;
 }
