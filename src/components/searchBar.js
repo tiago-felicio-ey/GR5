@@ -1,9 +1,12 @@
 import React from "react";
 import { InputGroup, FormControl, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import "./searchBar.css";
+
+
 
 const SearchBar = () => {
 
-  
   return (
     <div id="searchCard">
       <div id="squareSearch">
@@ -13,13 +16,18 @@ const SearchBar = () => {
             aria-label="Heroi"
             aria-describedby="basic-addon2"
           />
-          <Button variant="outline-secondary" id="button-addon2">
-            Pesquisar
-          </Button>
+          <form>
+            <Button
+              type="submit"
+              variant="outline-secondary"
+              id="button-addon2"
+            >
+              <Link to="/heroes">Pesquisar</Link>
+            </Button>
+          </form>
         </InputGroup>
       </div>
     </div>
   );
 };
-
 export default SearchBar;

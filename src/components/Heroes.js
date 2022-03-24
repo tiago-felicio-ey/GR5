@@ -3,6 +3,14 @@ import { Table, Button } from "react-bootstrap";
 import SearchBar from "./searchBar";
 
 const Heroes = () => {
+  function handleSubmitUpdate(e) {
+    e.preventDefault();
+    alert("Update");
+  }
+  function handleSubmitDelete(e) {
+    e.preventDefault();
+    alert("Delete");
+  }
 
   return (
     <div>
@@ -23,14 +31,18 @@ const Heroes = () => {
             <td>hero_universe</td>
             <td>hero_date</td>
             <td id="margin">
-              <Button variant="outline-light" size="sm">
-                Alterar
-              </Button>
+              <form onSubmit={handleSubmitUpdate}>
+                <Button type="submit" variant="outline-light" size="sm">
+                  Alterar
+                </Button>
+              </form>
             </td>
             <td id="margin">
-              <Button variant="outline-light" size="sm">
-                Deletar
-              </Button>
+              <form onSubmit={handleSubmitDelete}>
+                <Button type="submit" variant="outline-light" size="sm">
+                  Deletar
+                </Button>
+              </form>
             </td>
           </tr>
         </tbody>

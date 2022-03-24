@@ -18,7 +18,6 @@ function App() {
           <Route path="/heroes" element={<Heroes />}></Route>
           <Route path="/addhero" element={<AddHeroes />}></Route>
           <Route path="/login" element={<Login />}></Route>
-          
         </Routes>
       </BrowserRouter>
     </div>
